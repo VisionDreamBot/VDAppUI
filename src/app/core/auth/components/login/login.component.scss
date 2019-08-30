@@ -1,0 +1,370 @@
+/* Custom styles for main template
+  --------------------------------*/
+a {
+  color: var(--deep-sky-blue-capri) !important;
+  padding: 2px 6px;
+  text-align: center;
+  display: inline-block;
+}
+  a:hover, a:focus {
+    color: var(--pure-yellow) !important;
+    padding: 2px 6px;
+    text-align: center;
+    display: inline-block;
+  }
+
+/*
+  Custom styles for form template
+  Form name: form-login - start
+  ------------------------------*/
+.form-container {
+  background-color: transparent;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.form-login {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  margin: auto;
+}
+
+.fa-city {
+  font-size: 48px;
+  color: #11862f;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  height: 3.125rem;
+  padding: .75rem;
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0; /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: var(--dark-gray) !important;
+  pointer-events: none;
+  cursor: text; /* Match the input under the label */
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: 1.25rem;
+  padding-bottom: .25rem;
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+@supports (-ms-ime-align: auto) {
+  .form-label-group > label {
+    display: none;
+  }
+
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-label-group > label {
+    display: none;
+  }
+
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+.form-login .checkbox {
+  font-weight: 400;
+}
+
+.form-login .form-item {
+  position: relative;
+  box-sizing: unset;
+  height: auto;
+  padding: 0;
+  font-size: 1em;
+  font-weight: 400;
+  background-color: inherit;
+}
+
+.form-login .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-login .form-control:focus {
+  z-index: 2;
+}
+
+.form-login input[type="email"] {
+  margin-bottom: -1px;
+  /*border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;*/
+}
+
+.form-login input[type="password"] {
+  margin-bottom: 10px;
+  /*border-top-left-radius: 0;
+  border-top-right-radius: 0;*/
+}
+
+/*-- Custom form styles for: form-login --
+  form-login - end
+  --------------------------------------*/
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*!
+* ****************************** Elegant Form ******************************
+*/
+.form-elegant .font-small {
+  font-size: 0.8rem;
+}
+
+.form-elegant .z-depth-1a {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+  box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+}
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+}
+
+/******************************** Gradient Form ********************************/
+.form-gradient .font-small {
+  font-size: 0.8rem;
+}
+
+.form-gradient .header {
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+}
+
+.form-gradient input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #fd9267;
+  -webkit-box-shadow: 0 1px 0 0 #fd9267;
+  box-shadow: 0 1px 0 0 #fd9267;
+}
+
+.form-gradient input[type=text]:focus:not([readonly]) + label {
+  color: #4f4f4f;
+}
+
+.form-gradient input[type=password]:focus:not([readonly]) {
+  border-bottom: 1px solid #fd9267;
+  -webkit-box-shadow: 0 1px 0 0 #fd9267;
+  box-shadow: 0 1px 0 0 #fd9267;
+}
+
+.form-gradient input[type=password]:focus:not([readonly]) + label {
+  color: #4f4f4f;
+}
+
+/******************************** Light Form ********************************/
+.form-light .font-small {
+  font-size: 0.8rem;
+}
+
+.form-light [type="radio"] + label,
+.form-light [type="checkbox"] + label {
+  font-size: 0.8rem;
+}
+
+.form-light [type="checkbox"] + label:before {
+  top: 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.form-light input[type="checkbox"] + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  z-index: 0;
+  border-radius: 1px;
+  margin-top: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.form-light input[type="checkbox"]:checked + label:before {
+  top: -4px;
+  left: -3px;
+  width: 12px;
+  height: 22px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent #EB3573 #EB3573 transparent;
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+.form-light .footer {
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+}
+
+/******************************** Dark Form ********************************/
+.form-dark .font-small {
+  font-size: 0.8rem;
+}
+
+.form-dark [type="radio"] + label,
+.form-dark [type="checkbox"] + label {
+  font-size: 0.8rem;
+}
+
+.form-dark [type="checkbox"] + label:before {
+  top: 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.form-dark .md-form label {
+  color: #fff;
+}
+
+.form-dark input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #00C851;
+  -webkit-box-shadow: 0 1px 0 0 #00C851;
+  box-shadow: 0 1px 0 0 #00C851;
+}
+
+.form-dark input[type=text]:focus:not([readonly]) + label {
+  color: #fff;
+}
+
+.form-dark input[type=password]:focus:not([readonly]) {
+  border-bottom: 1px solid #00C851;
+  -webkit-box-shadow: 0 1px 0 0 #00C851;
+  box-shadow: 0 1px 0 0 #00C851;
+}
+
+.form-dark input[type=password]:focus:not([readonly]) + label {
+  color: #fff;
+}
+
+.form-dark input[type="checkbox"] + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  z-index: 0;
+  border: 1.5px solid #fff;
+  border-radius: 1px;
+  margin-top: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.form-dark input[type="checkbox"]:checked + label:before {
+  top: -4px;
+  left: -3px;
+  width: 12px;
+  height: 22px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent #00c851 #00c851 transparent;
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+/******************************** Simple Form ********************************/
+.form-simple .font-small {
+  font-size: 0.8rem;
+}
+
+.form-simple .header {
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+}
+
+.form-simple input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #ff3547;
+  -webkit-box-shadow: 0 1px 0 0 #ff3547;
+  box-shadow: 0 1px 0 0 #ff3547;
+}
+
+.form-simple input[type=text]:focus:not([readonly]) + label {
+  color: #4f4f4f;
+}
+
+.form-simple input[type=password]:focus:not([readonly]) {
+  border-bottom: 1px solid #ff3547;
+  -webkit-box-shadow: 0 1px 0 0 #ff3547;
+  box-shadow: 0 1px 0 0 #ff3547;
+}
+
+.form-simple input[type=password]:focus:not([readonly]) + label {
+  color: #4f4f4f;
+}

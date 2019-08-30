@@ -1,0 +1,865 @@
+/**
+ * Created by:  VisionDream ICT Solutions
+ * Author:      Onkgopotse Lenake
+ * Email:       visiondreamict@gmail.com
+ * Website:     www.visiondream.wordpress.com
+ * 
+ * Copyright © 2019 VisionDream ICT Solutions. All Rights Reserved.
+ */
+
+/********************** Global theme and properties **********************/
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+:root {
+  /********************** Vision Yellow Color Config **********************/
+  --electric-yellow: #ffff00;
+  --pure-yellow: #ffc000;
+  --usc-gold: #ffcc00;
+  --light-pure-yellow: #ffea00;
+  --very-light-pure-yellow: #eaff00;
+  /********************** Dream Blue Color Config **********************/
+  --deep-sky-blue-capri: #00bfff;
+  --deep-sky-blue-capri-websafe: #00ccff;
+  --dark-sky-blue: #00aaff;
+  --dark-sky-blue-websafe: #0099ff;
+  --very-dark-sky-blue: #0080ff;
+  --blue: #0000ff;
+  --light-blue: #0033ff;
+  --very-light-blue: #0040ff;
+  --very-dark-blue: #204060;
+  --very-dark-blue-websafe: #333366;
+  --soft-blue: #4e73df;
+  --moderate-blue: #6666cc;
+  --dark-moderate-blue: #336699;
+  --very-dark-moderate-blue: #2d5986;
+  --very-very-dark-moderate-blue: #264d73;
+  /********************** Cyan Color Config **********************/
+  --very-dark-desaturated-cyan: #336666;
+  --stong-cyan: #33cc99;
+  --green-cyan: #00ffc0;
+  --green-cyan-websafe: #00ffcc;
+  --moderate-cyan: #36b9cc;
+  --dark-moderate-cyan: #339999;
+  --aqua: #00ffff;
+  --aqua-cyan: #00d4ff;
+  --aqua-cyan-websafe: #00ccff;
+  /********************** Social Color Config **********************/
+  --facebook-color: #4060A5;
+  --linkedin-color: #0094BC;
+  --twitter-color: #00ABE3;
+  /********************** Gray Color Config **********************/
+  --dark-gray: #999999;
+  --very-dark-gray: #666666;
+  --dark-grayish-blue: #858796;
+  --very-dark-grayish-blue: #5a5c69; /* dark */
+  --light-grayish-blue: #f8f9fc;
+  --light-gray: #cccccc;
+  --very-light-gray: #dddddd;
+  --very-very-light-gray: #eeeeee;
+  --very-very-very-light-gray: #fafafa;
+  /********************** Green Color Config **********************/
+  --yellow-green: #adff2f;
+  --vivid-green: #99ff33;
+  --office-green: #008000; /* green */
+  --dark-cyan-lime-green: #009933;
+  --very-dark-cyan-lime-green: #11862f;
+  --very-dark-lime-green: #006400;
+  --pakistan-green: #006600;
+  --lawn-green: #7cfc00;
+  --bright-green: #66ff00;
+  --light-sea-green: #20b2aa;
+  --lime-green: #32cd32;
+  --strong-lime-green: #33cc33;
+  --lemon-lime: #bfff00;
+  --electric-lime: #ccff00;
+  --cyan-lime-green: #00ff40;
+  --electric-green: #00ff00;
+  --pure-lime-green: #00ff33;
+  /********************** Orange Color Config **********************/
+  --bright-orange: #f6c23e;
+  --vivid-orange: #fd7e14;
+  --light-orange: #ff7f50;
+  --pure-orange: #ff8000;
+  --light-pure-orange: #ff9900;
+  --dark-pure-orange: #ff4000;
+  /********************** Red Color Config **********************/
+  --pure-red: #ff3300;
+  --red: #ff0000;
+  --passion-red: #ef212c;
+  --vivid-red: #ff3333;
+  --bright-red: #e74a3b;
+  --light-red: #ff6666;
+  /********************** Other Main Color Config **********************/
+  --dark-pure-violet: #8000ff;
+  --light-pure-violet: #9900ff;
+  --pure-magenta: #ff00ff;
+  --white: #ffffff;
+  --black: #000000;
+  --pink: #e83e8c;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --teal: #20c9a6;
+  --secondary: #858796;
+  --success: #1cc88a;
+  --info: #36b9cc;
+  --warning: #f6c23e;
+  --danger: #e74a3b;
+  /********************** Other Custom Properties Config **********************/
+  /*--full-page-height: calc(100vh - 114px);*/
+  --full-page-height: 100%;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-roboto: Roboto, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  /*height: var(--full-page-height);
+  position: relative;
+  margin: 0;
+  box-sizing: border-box;*/
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+header, footer, main, nav, vd-container, vd-container-header, vd-container-text, mat-tab-group {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans-serif);
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.15;
+  background-color: var(--very-very-light-gray);
+  color: var(--dark-gray);
+  text-align: left;
+}
+
+.footer-absolute {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
+
+address {
+  margin-bottom: 1em;
+  font-style: normal;
+  line-height: inherit;
+}
+
+ol, ul, dl {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+a {
+  color: var(--white) !important;
+  text-decoration: none;
+  background-color: transparent;
+  display: inline-block;
+}
+
+a:hover, a:focus {
+  color: var(--pure-yellow) !important;
+  text-decoration: none;
+  background-color: inherit;
+  display: inline-block;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover,
+a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  color: var(--dark-gray) !important;
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  text-align: inherit;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+input[type=email],
+input[type=text],
+input[type=password] {
+  width: 100%;
+  -webkit-border-radius: 2em;
+}
+
+mat-tab-group {
+  text-align: left;
+}
+
+mat-tab-group p {
+  padding-top: 0.5em;
+}
+
+.img-fluid {
+  max-width: unset !important;
+  width: 100% !important;
+}
+
+.opacity {
+  opacity: 1.0 !important;
+}
+
+.vd-layout-wrapper {
+  height: 100%;
+}
+
+.vd-flex-wrapper {
+  height: 100%;
+}
+
+.vd-container {
+  width: 100%;
+  padding-right: 0.75em;
+  padding-left: 0.75em;
+  margin-right: auto;
+  margin-left: auto;
+}
+  .vd-container-header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+    .vd-container-text {
+      font-size: 1.5em;
+      font-weight: 500;
+      text-shadow: 2px 3px 5px grey;
+      margin: 20px 0;
+    }
+
+.vd-welcome {
+  background-color: transparent;
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+.vd-small {
+  font-size: 8pt;
+}
+
+.vd-version-info {
+  font-size: 8pt;
+  float: right;
+}
+
+.vd-control-text {
+  font-size: 0.5em;
+  font-weight: 500;
+}
+
+.vd-button-row button,
+.vd-button-row a {
+  margin-right: 8px;
+}
+
+.vd-button-container {
+  margin: 1em .5em;
+  text-align: center;
+}
+  .vd-button { /* Global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--very-light-gray) !important; /* Border for the vd buttons */
+    box-shadow: 0 3px 3px var(--dark-gray) !important;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--white) !important;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 27px;
+    -moz-border-radius: 27px;
+    -webkit-border-radius: 27px;
+  }
+    /* Primary button */
+    .vd-button-primary {
+      background: var(--deep-sky-blue-capri) !important;
+      color: var(--white);
+    }
+      .vd-button-primary:before { /* use :before to add relevant icons */
+        font-family: "FontAwesome";
+        /*content: "\f09a";*/ /* add visiondream icon */
+      }
+      .vd-button-primary:hover {
+        background: transparent !important;
+        color: var(--pure-yellow);
+        border-color: var(--deep-sky-blue-capri) !important; /* change the border color on mouse hover */
+      }
+
+    /* Secondary button */
+    .vd-button-secondary {
+      background: transparent;
+      color: var(--pure-yellow) !important;
+      border: var(--pure-yellow) !important;
+    }
+      .vd-button-secondary:before { /* use :before to add relevant icons */
+        font-family: "FontAwesome";
+        /*content: "\f09a";*/ /* add visiondream icon */
+      }
+      .vd-button-secondary:hover {
+        background: var(--white) !important;
+        color: var(--pure-yellow);
+        border-color: var(--pure-yellow) !important; /* change the border color on mouse hover */
+      }
+
+/**
+* Vision-Dream Brand Main Colors - Start
+* --------------------------------------
+*/
+/******************************** Vision Yellow Definition ********************************/
+.vd-bgbase-vision {
+  background-color: var(--pure-yellow) !important;
+}
+
+.vd-fgbase-vision {
+  color: var(--pure-yellow) !important;
+}
+
+.vd-bgprimary-vision {
+  background-color: var(--pure-yellow) !important;
+}
+
+.vd-fgprimary-vision {
+  color: var(--pure-yellow) !important;
+}
+
+.vd-bgsecondary-vision {
+  background-color: var(--usc-gold) !important;
+}
+
+.vd-fgsecondary-vision {
+  color: var(--usc-gold) !important;
+}
+
+.vd-bgternary-vision {
+  background-color: var(--electric-yellow) !important;
+}
+
+.vd-fgternary-vision {
+  color: var(--electric-yellow) !important;
+}
+
+/******************************** Hyphen Gray Definition ********************************/
+.vd-bgprimary-hyphen {
+  background-color: var(--dark-gray) !important;
+}
+
+.vd-fgprimary-hyphen {
+  color: var(--dark-gray) !important;
+}
+
+.vd-bgsecondary-hyphen {
+  background-color: var(--usc-gold) !important;
+}
+
+.vd-fgsecondary-hyphen {
+  color: var(--usc-gold) !important;
+}
+
+.vd-bgternary-hyphen {
+  background-color: var(--usc-gold) !important;
+}
+
+.vd-fgternary-hyphen {
+  color: var(--usc-gold) !important;
+}
+
+/******************************** Dream Blue Definition ********************************/
+.vd-bgbase-dream {
+  background-color: var(--very-dark-moderate-blue) !important;
+}
+
+.vd-fgbase-dream {
+  color: var(--very-dark-moderate-blue) !important;
+}
+
+.vd-bgprimary-dream {
+  background-color: var(--deep-sky-blue-capri) !important;
+}
+
+.vd-fgprimary-dream {
+  color: var(--deep-sky-blue-capri) !important;
+}
+
+.vd-bgsecondary-dream {
+  background-color: var(--deep-sky-blue-websafe) !important;
+}
+
+.vd-fgsecondary-dream {
+  color: var(--deep-sky-blue-websafe) !important;
+}
+
+.vd-bgternary-dream {
+  background-color: var(--usc-gold) !important;
+}
+
+.vd-fgternary-dream {
+  color: var(--usc-gold) !important;
+}
+/*!
+* Vision-Dream Brand Main Colors - Start
+* --------------------------------------
+**/
+/******************************** Other Custom Colors Definition ********************************/
+.bg-deep-sky-blue-light {
+  background-color: var(--deep-sky-blue-light) !important;
+}
+
+.fg-deep-sky-blue-light {
+  color: var(--deep-sky-blue-light) !important;
+}
+
+.bg-deep-sky-blue-dark {
+  background-color: var(--deep-sky-blue-dark) !important;
+}
+
+.fg-deep-sky-blue-dark {
+  color: var(--deep-sky-blue-dark) !important;
+}
+
+.bg-deep-pure-blue {
+  background-color: var(--deep-pure-blue) !important;
+}
+
+.fg-deep-pure-blue {
+  color: var(--deep-pure-blue) !important;
+}
+
+.bg-dark-moderate-blue {
+  background-color: var(--dark-moderate-blue) !important;
+}
+
+.fg-dark-moderate-blue {
+  color: var(--dark-moderate-blue) !important;
+}
+
+.bg-very-dark-moderate-blue {
+  background-color: var(--very-dark-moderate-blue) !important;
+}
+
+.fg-very-dark-moderate-blue {
+  color: var(--very-dark-moderate-blue) !important;
+}
+
+.bg-very-very-dark-moderate-blue {
+  background-color: var(--very-very-dark-moderate-blue) !important;
+}
+
+.fg-very-very-dark-moderate-blue {
+  color: var(--very-very-dark-moderate-blue) !important;
+}
+
+.bg-dark-gray {
+  background-color: var(--dark-gray) !important;
+}
+
+.fg-dark-gray {
+  color: var(--dark-gray) !important;
+}
+
+.bg-very-dark-gray {
+  background-color: var(--very-dark-gray) !important;
+}
+
+.fg-very-dark-gray {
+  color: var(--very-dark-gray) !important;
+}
+
+.bg-very-dark-grayish-blue {
+  background-color: var(--very-dark-grayish-blue) !important;
+}
+
+.fg-very-dark-grayish-blue {
+  color: var(--very-dark-grayish-blue) !important;
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray) !important;
+}
+
+.fg-light-gray {
+  color: var(--light-gray) !important;
+}
+
+.bg-white {
+  background-color: var(--white) !important;
+}
+
+.fg-white {
+  color: var(--white) !important;
+}
+
+.bg-black {
+  background-color: var(--black) !important;
+}
+
+.fg-black {
+  color: var(--black) !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.fg-transparent {
+  color: transparent !important;
+}
+
+.bg-body {
+  background-color: #FAFAFA !important;
+}
+
+.fg-body {
+  color: #FAFAFA !important;
+}
+
+/******************************** Custom social button icons definition - Start  ********************************/
+#container-social {
+  margin: 1em .5em;
+  text-align: center;
+}
+  .btn-global-social { /* Global social button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--very-light-gray) !important; /* Border for the social buttons */
+    box-shadow: 0 3px 3px var(--dark-gray) !important;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--white) !important;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 27px;
+    -moz-border-radius: 27px;
+    -webkit-border-radius: 27px;
+  }
+    /* Facebook button class*/
+    .btn-facebook {
+      background: var(--facebook-color) !important;
+    }
+      .btn-facebook:before { /* use :before to add the relevant icons */
+        font-family: "FontAwesome";
+        content: "\f09a"; /* add facebook icon */
+      }
+      .btn-facebook:hover {
+        color: var(--facebook-color);
+        background: var(--white) !important;
+        border-color: var(--facebook-color) !important; /* change the border color on mouse hover */
+      }
+
+    /* Linkedin button class*/
+    .btn-linkedin {
+      background: var(--linkedin-color) !important;
+    }
+      .btn-linkedin:before {
+        font-family: "FontAwesome";
+        content: "\f0e1"; /* add linkedin icon */
+      }
+      .btn-linkedin:hover {
+        color: var(--linkedin-color);
+        background: var(--white) !important;
+        border-color: var(--linkedin-color) !important;
+      }
+
+    /* Twitter button class*/
+    .btn-twitter {
+      background: var(--twitter-color) !important;
+    }
+      .btn-twitter:before {
+        font-family: "FontAwesome";
+        content: "\f099"; /* add twitter icon */
+      }
+      .btn-twitter:hover {
+        color: var(--twitter-color);
+        background: var(--white) !important;
+        border-color: var(--twitter-color) !important;
+      }
+/******************************** Custom social button icons definition - End  ********************************/
+/**
+* Global CSS Styles
+* -----------------
+**/
+.border-top {
+  border-top: 2px solid var(--dark-gray) !important;
+}
+
+/** Scroll to top icon */
+.scroll-to-top {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  display: none;
+  width: 2.75em;
+  height: 2.75em;
+  text-align: center;
+  color: #fff;
+  background: rgba(90, 92, 105, 0.5);
+  line-height: 46px;
+}
+  .scroll-to-top:hover,
+  .scroll-to-top:focus {
+    color: var(--white) !important;
+  }
+  .scroll-to-top:hover {
+    background: var(--very-dark-grayish-blue) !important;
+  }
+
+.scroll-to-top i,
+.scroll-to-top fa-icon {
+  font-weight: 800;
+}
+
+.rounded-sm {
+  border-radius: 0.2em !important;
+}
+
+.rounded {
+  border-radius: 0.35em !important;
+}
+
+.rounded-top {
+  border-top-left-radius: 0.35em !important;
+  border-top-right-radius: 0.35em !important;
+}
+
+.rounded-right {
+  border-top-right-radius: 0.35em !important;
+  border-bottom-right-radius: 0.35em !important;
+}
+
+.rounded-bottom {
+  border-bottom-right-radius: 0.35em !important;
+  border-bottom-left-radius: 0.35em !important;
+}
+
+.rounded-left {
+  border-top-left-radius: 0.35em !important;
+  border-bottom-left-radius: 0.35em !important;
+}
+
+.rounded-lg {
+  border-radius: 0.3em !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.rounded-pill {
+  border-radius: 50em !important;
+}
+
+.rounded-0 {
+  border-radius: 0 !important;
+}
+
+/** Icon sizes and Spacer */
+.vd-icon {
+  background-color: transparent !important;
+  font-size: 1.20em;
+  font-weight: 500;
+}
+
+.vd-icon-bars {
+  background-color: transparent !important;
+  color: var(--white) !important;
+  font-size: 1.40em;
+  font-weight: 500;
+}
+  .vd-icon-bars:hover,
+  .vd-icon-bars:focus {
+    background-color: inherit;
+    color: var(--pure-yellow) !important;
+  }
+
+.vd-icon-user {
+  background-color: inherit;
+  font-size: 1.40em;
+  font-weight: 500;
+}
+  .vd-icon-user:hover,
+  .vd-icon-user:focus {
+    background-color: inherit;
+    color: var(--white) !important;
+  }
+
+.vd-icon-signin {
+  background-color: inherit;
+  font-size: 1.40em;
+  font-weight: 500;
+}
+  .vd-icon-signin:hover,
+  .vd-icon-signin:focus {
+    background-color: inherit;
+    color: var(--white) !important;
+  }
+
+.vd-icon-balancescale {
+  background-color: transparent !important;
+  color: var(--white) !important;
+  font-size: 1.40em;
+  font-weight: 500;
+}
+  .vd-icon-balancescale:hover,
+  .vd-icon-balancescale:focus {
+    background-color: inherit;
+    color: var(--pure-yellow) !important;
+  }
+
+.vd-icon-usersecret {
+  background-color: transparent !important;
+  color: var(--white) !important;
+  font-size: 1.40em;
+  font-weight: 500;
+}
+  .vd-icon-usersecret:hover,
+  .vd-icon-usersecret:focus {
+    background-color: inherit;
+    color: var(--pure-yellow) !important;
+  }
+
+.vd-icon-plus {
+  background-color: transparent !important;
+  color: var(--very-dark-gray) !important;
+  font-size: 1.40em;
+  font-weight: 500;
+}
+  .vd-icon-plus:hover,
+  .vd-icon-plus:focus {
+    background-color: inherit;
+    color: var(--very-dark-gray) !important;
+  }
+
+.vd-icon-circle {
+  background-color: transparent !important;
+  color: var(--very-dark-gray) !important;
+  font-size: 1.40em;
+  font-weight: 500;
+}
+  .vd-icon-circle:hover,
+  .vd-icon-circle:focus {
+    background-color: inherit;
+    color: var(--very-dark-gray) !important;
+  }
+
+.vd-spacer {
+  flex: 1 1 auto;
+}
+
+.vd-hint-text {
+  font-size: 8pt;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+
+/**
+* Copyright © 2019 VisionDream ICT Solutions. All Rights Reserved.
+* Use of this source code is governed by VisionDream-style license 
+* that can be found in the LICENSE file at the below link address 
+* http://visiondream.local/#/legal/terms
+*/

@@ -1,0 +1,14 @@
+/* Custom template CSS
+---------------------- */
+a {
+  color: var(--deep-sky-blue-capri) !important;
+  padding: 2px 6px;
+  text-align: center;
+  display: inline-block;
+}
+  a:hover, a:focus {
+    color: var(--pure-yellow) !important;
+    padding: 2px 6px;
+    text-align: center;
+    display: inline-block;
+  }

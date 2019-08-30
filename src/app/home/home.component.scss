@@ -1,0 +1,43 @@
+/** Custom CSS styles for home-index component sections and mat tab
+-------------------------------------------------------------------
+*/
+.control-font-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.button-size {
+  background-color: inherit;
+  padding: 10px 20px;
+  margin-left: 60px;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.button-primary {
+  color: #28a745;
+  border: 2px solid #28a745;
+}
+  .button-primary:hover,
+  .button-primary:focus {
+    background-color: #28a745;
+    color: #ffffff;
+  }
+
+.button-secondary {
+  color: #000;
+  border: 2px solid #000;
+}
+  .button-secondary:hover,
+  .button-secondary:focus {
+    background-color: #000;
+    color: #ffffff;
+  }

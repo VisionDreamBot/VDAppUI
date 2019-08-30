@@ -1,0 +1,77 @@
+/* Highlighting rules for social icons, using normal link items */
+/*li .glyphicon {
+  margin-right: 10px;
+}
+
+li.link-active a,
+li.link-active a:hover,
+li.link-active a:focus {
+  background-color: inherit;
+  color: lightgray;
+}*/
+
+/*.nav-item-group {
+  color: var(--dark-gray) !important;
+  font-size: 1em;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1rem;
+}*/
+
+a {
+  font-size: 1em;
+  font-weight: 500;
+  display: inline-block;
+}
+  a:hover, a:focus {
+    color: var(--very-light-gray) !important;
+    display: inline-block;
+  }
+
+/* Button links */
+.btn {
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-nav-brand {
+  width: 200px;
+  box-sizing: border-box;
+  text-align: right;
+  color: var(--white) !important;
+  font-size: 1em;
+  background-image: url('../../../assets/vd/brand/images/vd_brand_yelblu_sol_tra_64x64.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding: 5px 10px;
+  margin: 10px 5px;
+}
+  .btn-nav-brand:hover,
+  .btn-nav-brand:focus {
+    background-color: inherit;
+    color: var(--pure-yellow) !important;
+  }
+
+.navigation-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+mat-toolbar {
+  border-radius: 3px;
+}
+
+@media(max-width: 959px) {
+  mat-toolbar {
+    border-radius: 0px;
+  }
+}

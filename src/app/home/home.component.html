@@ -1,0 +1,73 @@
+<div id="page-top" fxLayoutAlign="center" class="vd-container-header vd-bgprimary-dream px-4">
+  <h1 class="vd-container-text vd-fgprimary-vision">Welcome</h1>
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="center center" class="vd-layout-wrapper">
+  <div fxFlex="80%" fxFlex.lt-md="100%" class="vd-flex-wrapper">
+    <div class="vd-container">
+
+      <div class="vd-welcome">
+        <span class="vd-fgprimary-vision">Vision</span>
+        <span class="vd-fgprimary-dream">Dream </span>
+        <span class="vd-fgprimary-hyphen">ICT Solutions</span>
+      </div>
+
+      <p>
+        Our vision to become a dream focuses on providing small and medium enterprises with
+        custom designed Information Communications Technology (ICT) solutions. We favour a philosophy of simple, flexible
+        and elegant solutions that add value to address business needs. We pride ourselves on delivering solutions that are
+        relevant to your business and that keep abreast with current technology standards.
+      </p>
+      <p>
+        We are not driven by ICT technology trends or hype, but by good old-fashioned common
+        sense, so to realise your business's ICT <span class="vd-fgprimary-vision">Vision</span> and
+        <span class="vd-fgprimary-dream">Dream</span>.
+      </p>
+
+      <h3 class="vd-fgprimary-dream text-center">Recent Projects</h3>
+
+      <mat-tab-group (selectedTabChange)="executeSelectedChange($event)" class="container fg-black">
+        <mat-tab label="VisionDream">
+          <p>Our home base project.</p>
+        </mat-tab>
+        <mat-tab label="LCS GFI">
+          <p>LCS Global Forex Institute website project. The business is offering Forex training to all persons interested.</p>
+        </mat-tab>
+        <mat-tab label="Soweto Tutor">
+          <p>
+            Soweto Tutor website project. The business is offering teaching of <b>Mathematics</b> and <b>Science</b> that caters
+            for children and adults.
+          </p>
+        </mat-tab>
+      </mat-tab-group>
+
+      <h3 class="vd-fgprimary-dream text-center">Follow us</h3>
+      <div id="container-social">
+        <a class="btn-facebook btn-global-social"
+           href="https://web.facebook.com/VisionDreamICT/" target="_blank" rel="noreferrer">
+        </a>
+        <a class="btn-twitter btn-global-social"
+           href="https://twitter.com/VisionDreamICT" target="_blank" rel="noreferrer">
+        </a>
+        <a class="btn-linkedin btn-global-social"
+           href="https://www.linkedin.com/in/vision-dream-ict-solutions-7a73bb14a/" target="_blank" rel="noreferrer">
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Scroll to Top Button -->
+<a class="scroll-to-top rounded" href="#page-top">
+  <!--<i class="fas fa-angle-up"></i>-->
+  <fa-icon [icon]="vdFaAngleUp"></fa-icon>
+</a>
+
+
+<!--
+- Copyright © 2019 VisionDream ICT Solutions. All Rights Reserved.
+- Use of this source code is governed by VisionDream-style license
+- that can be found in the LICENSE file at the below link address
+- http://visiondream.local/#/legal/terms
+-->

@@ -1,0 +1,12 @@
+/*----- Side nav css styles -----*/
+mat-sidenav-container, mat-sidenav, mat-sidenav-content {
+  height: var(--full-page-height);
+}
+
+mat-sidenav {
+  width: 250px;
+}
+
+main {
+  padding: 0;
+}

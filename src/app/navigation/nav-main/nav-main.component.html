@@ -1,0 +1,118 @@
+<!--<div fxLayout="row wrap" fxLayoutAlign="center center" class="vd-layout-wrapper">
+  <div fxFlex="100%" fxFlex.lt-md="100%" class="vd-flex-wrapper">-->
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!-- Navigation Menu Icon -->
+    <span fxHide.gt-xs>
+      <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon class="vd-icon-bars" aria-hidden="false" aria-label="Navigation menu">
+          <fa-icon [icon]="vdFaBars"></fa-icon>
+        </mat-icon>
+      </button>
+    </span>
+    <div>
+      <a class="p-2 btn btn-nav-brand btn-lg" [routerLink]='["/home"]' role="button"
+         [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+        VisionDream
+      </a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="start" fxHide.xs>
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+        <li>
+          <a [routerLink]='["/services"]' [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+            Services
+          </a>
+        </li>
+        <li>
+          <a [routerLink]='["/projects"]' [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+            Projects
+          </a>
+        </li>
+        <li>
+          <a [routerLink]='["/contact"]' [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+        <li>
+          <a [routerLink]='["/register"]' [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+            <mat-icon class="vd-icon-user" aria-hidden="false" aria-label="Register account">
+              <fa-icon [icon]="vdFaUser"></fa-icon>
+            </mat-icon>
+            Register
+          </a>
+        </li>
+        <li>
+          <a [routerLink]='["/login"]' [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+            <mat-icon class="vd-icon-signin" aria-hidden="false" aria-label="Log in">
+              <fa-icon [icon]="vdFaSignInAlt"></fa-icon>
+            </mat-icon>
+            Log In
+          </a>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+  <!--</div>
+</div>-->
+
+<!--<nav class="navbar navbar-expand-md navbar-light fixed-top vd-bgprimary-dream shadow">
+  <a class="p-2 btn vd-btn-nav-brand btn-lg" [routerLink]='["/home"]' role="button"
+     [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto navigation-items">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]='["/home"]' [routerLinkActive]="active"
+           [routerLinkActiveOptions]="{exact: true}">
+          Vision-Dream
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]='["/services"]' [routerLinkActive]="active"
+           [routerLinkActiveOptions]="{exact: true}">
+          Services
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]='["/projects"]' [routerLinkActive]="active"
+           [routerLinkActiveOptions]="{exact: true}">
+          Projects
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]='["/contact"]' [routerLinkActive]="active"
+           [routerLinkActiveOptions]="{exact: true}">
+          Contact
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]='["/register"]' [routerLinkActive]="active"
+           [routerLinkActiveOptions]="{exact: true}">
+          Register
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]='["/login"]' [routerLinkActive]="active"
+           [routerLinkActiveOptions]="{exact: true}">
+          Log In
+        </a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+      <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+    </form>
+  </div>
+</nav>-->

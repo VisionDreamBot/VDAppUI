@@ -1,0 +1,202 @@
+<div id="page-top" fxLayoutAlign="center" class="vd-container-header vd-bgprimary-dream px-4">
+  <h2 class="vd-container-text vd-fgprimary-vision">Register A New Account Profile</h2>
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="center center" class="vd-layout-wrapper">
+  <div fxFlex="80%" fxFlex.lt-md="100%" class="vd-flex-wrapper">
+    <div class="vd-container">
+
+      <p class="text-center h4 mb-4 font-weight-normal">Capture account information below:</p>
+      <!--------------------- Card container: Start --------------------->
+      <div class="card border-dark mb-3 offset-md-3" style="max-width: 540px;">
+        <!---------- Card header ---------->
+        <div class="card-header text-center">
+          <p class="card-title h3 mb-3">
+            <strong>Create account</strong>
+          </p>
+        </div>
+        <!---------- Card body: Start ---------->
+        <div class="card-body px-lg-5 pt-0">
+          <h5 class="card-title h4 mb-4">
+            <span class="sr-only">Special title treatment</span>
+          </h5>
+          <!---------- Register account form: Start ---------->
+          <form class="card-text mb-3 form-register" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <!---------- Form row 1 - First name ---------->
+              <div class="form-label-group col mb-4">
+                <input type="text" class="form-control" id="firstName" name="firstName" formControlName="firstName"
+                       placeholder="First name" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                <label for="firstName">First name</label>
+                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                  <div *ngIf="f.firstName.errors.required">First name is required.</div>
+                </div>
+              </div>
+              <!---------- Form row 1 - Last name ---------->
+              <div class="form-label-group col mb-4">
+                <input type="text" class="form-control" id="lastName" name="lastName" formControlName="lastName"
+                       placeholder="Last name" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                <label for="lastName">Last name</label>
+                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                  <div *ngIf="f.lastName.errors.required">Last name is required.</div>
+                </div>
+              </div>
+            </div>
+            <!---------- Email ---------->
+            <div class="form-label-group">
+              <input type="email" class="form-control mb-4" id="emailAddress" name="emailAddress" formControlName="emailAddress"
+                     placeholder="E-mail address" [ngClass]="{ 'is-invalid': submitted && f.emailAddress.errors }" />
+              <label for="emailAddress">E-mail address</label>
+              <div *ngIf="submitted && f.emailAddress.errors" class="invalid-feedback">
+                <div *ngIf="f.emailAddress.errors.required">E-mail address is required.</div>
+                <div *ngIf="f.emailAddress.errors.email">E-mail address must be a valid e-mail address.</div>
+              </div>
+            </div>
+            <!---------- Password ---------->
+            <div class="form-label-group">
+              <input type="password" class="form-control mb-4" id="inputPassword" name="inputPassword" formControlName="inputPassword"
+                     placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.inputPassword.errors }" />
+              <label for="inputPassword">Password</label>
+              <div *ngIf="submitted && f.inputPassword.errors" class="invalid-feedback">
+                <div *ngIf="f.inputPassword.errors.required">Password is required.</div>
+                <div *ngIf="f.inputPassword.errors.minlength">Password must be at least 6 characters long.</div>
+              </div>
+            </div>
+            <!---------- Confirm password ---------->
+            <div class="form-label-group">
+              <input type="password" class="form-control mb-4" id="confirmPassword" name="confirmPassword"
+                     formControlName="confirmPassword" placeholder="Confirm password" aria-describedby="confirmPasswordHelpBlock"
+                     [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+              <label for="confirmPassword">Confirm password</label>
+              <!--<div class="hint-text text-muted text-center">
+            <p class="mb-4" id="confirmPasswordHelpBlock">
+              At least 6 characters for both passwords
+            </p>
+          </div>-->
+              <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                <div *ngIf="f.confirmPassword.errors.required">Confirm password is required.</div>
+                <div *ngIf="f.confirmPassword.errors.minlength">Confirm password must be at least 6 characters long.</div>
+              </div>
+            </div>
+            <!---------- Phone number ---------->
+            <div class="form-label-group">
+              <input type="text" class="form-control mb-4" id="cellNumber" name="cellNumber" formControlName="cellNumber"
+                     placeholder="Cellphone number" aria-describedby="cellNumberHelpBlock">
+              <label for="cellNumber">Cellphone number</label>
+              <!--<div class="hint-text text-muted text-center">
+            <p class="mb-4" id="cellNumberHelpBlock">
+              Optional - for two step authentication
+            </p>
+          </div>-->
+              <div *ngIf="submitted && f.cellNumber.errors" class="invalid-feedback">
+                <div *ngIf="f.cellNumber.errors.required">Cellphone number is required.</div>
+              </div>
+            </div>
+            <!---------- Register button ---------->
+            <div class="form-group my-4 text-center">
+              <button mat-stroked-button [disabled]="loading"
+                      class="btn vd-button-primary"
+                      aria-label="Register new user account">
+                <!--<mat-icon>user</mat-icon>-->
+                Register Account
+              </button>
+              <!--<button [onClick]="loading" class="btn btn-primary">Register</button>-->
+            </div>
+            <hr />
+            <!---------- Terms of Service and Privacy Notice links ---------->
+            <div class="text-center">
+              <small>
+                By clicking <em>Register Account</em> you agree to VisionDream's
+                <a href="/#/legal/terms">Terms of Service</a> and
+                <a href="/#/legal/privacy">Privacy Notice</a>.
+              </small>
+            </div>
+          </form>
+          <!---------- Register account form: End ---------->
+        </div>
+        <!---------- Card body: End ---------->
+      </div>
+      <!---------- Card container: End ---------->
+
+      <hr />
+
+      <div class="card">
+
+        <h5 class="card-header info-color white-text text-center py-4">
+          <strong>Sign up</strong>
+        </h5>
+
+        <div class="card-body px-lg-5 pt-0">
+
+          <form class="md-form" style="color: #757575;">
+
+            <input type="text" id="materialRegisterFormFirstName" class="form-control">
+            <label for="materialRegisterFormFirstName">First name</label>
+
+            <input type="email" id="materialRegisterFormLastName" class="form-control">
+            <label for="materialRegisterFormLastName">Last name</label>
+
+            <input type="email" id="materialRegisterFormEmail" class="form-control">
+            <label for="materialRegisterFormEmail">E-mail</label>
+
+            <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+            <label for="materialRegisterFormPassword">Password</label>
+
+            <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+              At least 8 characters and 1 digit
+            </small>
+
+            <input type="password" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock">
+            <label for="materialRegisterFormPhone">Phone number</label>
+
+            <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+              Optional - for two step authentication
+            </small>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="materialRegisterFormNewsletter">
+              <label class="form-check-label" for="materialRegisterFormNewsletter">Subscribe to our newsletter</label>
+            </div>
+
+
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+
+            <div class="text-center">
+              <p>or sign up with:</p>
+
+              <a type="button" class="btn-floating btn-fb btn-sm">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a type="button" class="btn-floating btn-tw btn-sm">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a type="button" class="btn-floating btn-li btn-sm">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a type="button" class="btn-floating btn-git btn-sm">
+                <i class="fab fa-github"></i>
+              </a>
+
+              <hr>
+
+              <p>
+                By clicking
+                <em>Sign up</em> you agree to our
+                <a href="" target="_blank">terms of service</a> and
+                <a href="" target="_blank">terms of service</a>.
+              </p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Scroll to Top Button -->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+  <!--<fa-icon [icon]="vdFaAngleUp"></fa-icon>-->
+</a>
