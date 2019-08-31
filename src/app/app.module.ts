@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { RoutingModule } from './routing/routing.module';
@@ -24,6 +24,39 @@ import { PrivacyComponent } from './pages/legal/privacy/privacy.component';
 import { TermsComponent } from './pages/legal/terms/terms.component';
 import { NotFoundComponent } from './pages/errors/not-found/not-found.component';
 import { ServerErrorComponent } from './pages/errors/server-error/server-error.component';
+
+// Icons - Generic
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faArchive } from '@fortawesome/free-solid-svg-icons';
+import { faAsterisk } from '@fortawesome/free-solid-svg-icons';
+
+// Icons - Footer
+import { faBalanceScale } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
+
+// Icons - Main Navigation
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faWrench } from '@fortawesome/free-solid-svg-icons';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { faCogs } from '@fortawesome/free-solid-svg-icons';
+
+// Icons - Side Navigation (includes: vdFaEnvelope, vdFaUser, vdFaSignInAlt)
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faClipboardList } from '@fortawesome/free-solid-svg-icons';
+import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+import { faSort } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -62,4 +95,16 @@ import { ServerErrorComponent } from './pages/errors/server-error/server-error.c
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  // Constructor
+  constructor(library: FaIconLibrary) {
+      // Adding dynamic icons to library for use
+    library.addIcons(
+      faAngleUp, faAngleDown, faAngleLeft, faAngleRight, faMapMarkerAlt, faArchive, faAsterisk, faBalanceScale,
+      faPlus, faUserSecret, faCircle, faBars, faEnvelope, faUser, faUserCircle, faSignInAlt, faQuestion, faWrench,
+      faCog, faCogs, faHome, faClipboardList, faProjectDiagram, faSort
+    );
+  }
+
+}

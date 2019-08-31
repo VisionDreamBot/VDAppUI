@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
+  // Properties
+  vdFaAngleUp = faAngleUp;
 
   constructor() { }
 

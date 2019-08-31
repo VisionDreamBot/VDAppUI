@@ -7,17 +7,24 @@
       <small>
         <span>
           &copy; {{VDBuildVersionModel.VDCopyright}}
-          <mat-icon class="vd-icon-balancescale">
-            <fa-icon [icon]="vdFaBalanceScale" class="fa-icon-size-small-left"></fa-icon>
-          </mat-icon>
-          <a [routerLink]='["/legal/terms"]'>Terms</a>
+
+          <a [routerLink]='["/legal/terms"]'>
+            <mat-icon class="vd-icon-balancescale">
+              <fa-icon [icon]="vdFaBalanceScale" class="fa-icon-size-small-left"></fa-icon>
+            </mat-icon>
+            Terms
+          </a>
+
           <mat-icon class="vd-icon-plus">
             <fa-icon [icon]="vdFaPlus" class="fa-icon-size-small"></fa-icon>
           </mat-icon>
-          <a [routerLink]='["/legal/privacy"]'>Privacy</a>
-          <mat-icon class="vd-icon-usersecret">
-            <fa-icon [icon]="vdFaUserSecret" class="fa-icon-size-small-right"></fa-icon>
-          </mat-icon>
+
+          <a [routerLink]='["/legal/privacy"]'>Privacy
+            <mat-icon class="vd-icon-usersecret">
+              <fa-icon [icon]="vdFaUserSecret" class="fa-icon-size-small-right"></fa-icon>
+            </mat-icon>
+          </a>
+
         </span>
         <span>
           <mat-icon class="vd-icon-circle">

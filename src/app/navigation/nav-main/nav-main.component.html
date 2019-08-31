@@ -12,25 +12,24 @@
       </button>
     </span>
     <div>
-      <a class="p-2 btn btn-nav-brand btn-lg" [routerLink]='["/home"]' role="button"
-         [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+      <a class="p-2 btn btn-nav-brand btn-lg" [routerLink]='["/home"]' role="button">
         VisionDream
       </a>
     </div>
     <div fxFlex fxLayout fxLayoutAlign="start" fxHide.xs>
       <ul fxLayout fxLayoutGap="15px" class="navigation-items">
         <li>
-          <a [routerLink]='["/services"]' [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+          <a [routerLink]='["/services"]'>
             Services
           </a>
         </li>
         <li>
-          <a [routerLink]='["/projects"]' [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+          <a [routerLink]='["/projects"]'>
             Projects
           </a>
         </li>
         <li>
-          <a [routerLink]='["/contact"]' [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+          <a [routerLink]='["/contact"]'>
             Contact
           </a>
         </li>
@@ -39,7 +38,7 @@
     <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
       <ul fxLayout fxLayoutGap="15px" class="navigation-items">
         <li>
-          <a [routerLink]='["/register"]' [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+          <a [routerLink]='["/register"]'>
             <mat-icon class="vd-icon-user" aria-hidden="false" aria-label="Register account">
               <fa-icon [icon]="vdFaUser"></fa-icon>
             </mat-icon>
@@ -47,7 +46,7 @@
           </a>
         </li>
         <li>
-          <a [routerLink]='["/login"]' [routerLinkActive]="active" [routerLinkActiveOptions]="{exact: true}">
+          <a [routerLink]='["/login"]'>
             <mat-icon class="vd-icon-signin" aria-hidden="false" aria-label="Log in">
               <fa-icon [icon]="vdFaSignInAlt"></fa-icon>
             </mat-icon>

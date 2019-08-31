@@ -2,14 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NGXLogger } from 'ngx-logger';
 import { environment } from '../environments/environment';
 
-import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import { faArchive } from '@fortawesome/free-solid-svg-icons';
-import { faAsterisk } from '@fortawesome/free-solid-svg-icons';
 import { faAt } from '@fortawesome/free-solid-svg-icons';
 import { faBan } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
@@ -36,8 +28,8 @@ import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
 import { faCloud } from '@fortawesome/free-solid-svg-icons';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
-import { faCog } from '@fortawesome/free-solid-svg-icons';
-import { faCogs } from '@fortawesome/free-solid-svg-icons';
+//import { faCog } from '@fortawesome/free-solid-svg-icons';
+//import { faCogs } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { faCompass } from '@fortawesome/free-solid-svg-icons';
@@ -91,7 +83,7 @@ import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faPhoneSquare } from '@fortawesome/free-solid-svg-icons';
 import { faPrint } from '@fortawesome/free-solid-svg-icons';
-import { faQuestion } from '@fortawesome/free-solid-svg-icons';
+//import { faQuestion } from '@fortawesome/free-solid-svg-icons';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
@@ -124,23 +116,42 @@ import { faUpload } from '@fortawesome/free-solid-svg-icons';
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { faUserTimes } from '@fortawesome/free-solid-svg-icons';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
-import { faWrench } from '@fortawesome/free-solid-svg-icons';
+//import { faWrench } from '@fortawesome/free-solid-svg-icons';
 
-import { faBalanceScale } from '@fortawesome/free-solid-svg-icons';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
+//// Icons - Generic
+//import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+//import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+//import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+//import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+//import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+//import { faArchive } from '@fortawesome/free-solid-svg-icons';
+//import { faAsterisk } from '@fortawesome/free-solid-svg-icons';
 
-import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { faClipboardList } from '@fortawesome/free-solid-svg-icons';
-import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
-import { faSort } from '@fortawesome/free-solid-svg-icons';
+//// Icons - Footer
+//import { faBalanceScale } from '@fortawesome/free-solid-svg-icons';
+//import { faPlus } from '@fortawesome/free-solid-svg-icons';
+//import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
+//import { faCircle } from '@fortawesome/free-solid-svg-icons';
+
+//// Icons - Main Navigation
+//import { faBars } from '@fortawesome/free-solid-svg-icons';
+//import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+//import { faUser } from '@fortawesome/free-solid-svg-icons';
+//import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+//import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+//import { faQuestion } from '@fortawesome/free-solid-svg-icons';
+//import { faWrench } from '@fortawesome/free-solid-svg-icons';
+//import { faCog } from '@fortawesome/free-solid-svg-icons';
+//import { faCogs } from '@fortawesome/free-solid-svg-icons';
+
+//// Icons - Side Navigation (includes: vdFaEnvelope, vdFaUser, vdFaSignInAlt)
+//import { faHome } from '@fortawesome/free-solid-svg-icons';
+//import { faClipboardList } from '@fortawesome/free-solid-svg-icons';
+//import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+//import { faSort } from '@fortawesome/free-solid-svg-icons';
+
+//import { FaConfig } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-root',
@@ -155,37 +166,37 @@ export class AppComponent implements OnInit {
   private serverApiUrl = environment.SERVER_API_URL;
 
   // Icons - Generic
-  vdFaAngleUp = faAngleUp;
-  vdFaAngleDown = faAngleDown;
-  vdFaAngleLeft = faAngleLeft;
-  vdFaAngleRight = faAngleRight;
+  //vdFaAngleUp = faAngleUp;
+  //vdFaAngleDown = faAngleDown;
+  //vdFaAngleLeft = faAngleLeft;
+  //vdFaAngleRight = faAngleRight;
 
-  vdFaMapMarkerAlt = faMapMarkerAlt;
-  vdFaArchive = faArchive;
-  vdFaAsterisk = faAsterisk;
+  //vdFaMapMarkerAlt = faMapMarkerAlt;
+  //vdFaArchive = faArchive;
+  //vdFaAsterisk = faAsterisk;
 
   // Icons - Footer
-  vdFaBalanceScale = faBalanceScale;
-  vdFaPlus = faPlus;
-  vdFaUserSecret = faUserSecret;
-  vdFaCircle = faCircle;
+  //vdFaBalanceScale = faBalanceScale;
+  //vdFaPlus = faPlus;
+  //vdFaUserSecret = faUserSecret;
+  //vdFaCircle = faCircle;
 
   // Icons - Main Navigation
-  vdFaBars = faBars;
-  vdFaEnvelope = faEnvelope;
-  vdFaUser = faUser;
-  vdFaUserCircle = faUserCircle;
-  vdFaSignInAlt = faSignInAlt;
-  vdFaQuestion = faQuestion;
-  vdFaWrench = faWrench;
-  vdFaCog = faCog;
-  vdFaCogs = faCogs;
+  //vdFaBars = faBars;
+  //vdFaEnvelope = faEnvelope;
+  //vdFaUser = faUser;
+  //vdFaUserCircle = faUserCircle;
+  //vdFaSignInAlt = faSignInAlt;
+  //vdFaQuestion = faQuestion;
+  //vdFaWrench = faWrench;
+  //vdFaCog = faCog;
+  //vdFaCogs = faCogs;
 
   // Icons - Side Navigation (includes: vdFaEnvelope, vdFaUser, vdFaSignInAlt)
-  vdFaHome = faHome;
-  vdFaClipboardList = faClipboardList;
-  vdFaProjectDiagram = faProjectDiagram;
-  vdFaSort = faSort;
+  //vdFaHome = faHome;
+  //vdFaClipboardList = faClipboardList;
+  //vdFaProjectDiagram = faProjectDiagram;
+  //vdFaSort = faSort;
 
   // Constructor
   constructor(private _Logger: NGXLogger) {
@@ -199,6 +210,8 @@ export class AppComponent implements OnInit {
     this._Logger.error('ERROR message');
     this._Logger.fatal('FATAL message');
     this._Logger.trace('TRACE message');
+
+    //faConfig.defaultPrefix = 'fas';
   }
 
   // Initialize

@@ -126,12 +126,12 @@
 }
 
 html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  /*height: var(--full-page-height);
-  position: relative;
   margin: 0;
-  box-sizing: border-box;*/
+  height: var(--full-page-height);
+  position: relative;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -142,6 +142,9 @@ header, footer, main, nav, vd-container, vd-container-header, vd-container-text,
 
 body {
   margin: 0;
+  height: var(--full-page-height);
+  position: relative;
+  box-sizing: border-box;
   font-family: var(--font-family-sans-serif);
   font-size: 1em;
   font-weight: 400;
@@ -180,13 +183,9 @@ p {
 
 abbr[title],
 abbr[data-original-title] {
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
 }
 
 address {
@@ -763,7 +762,7 @@ mat-tab-group p {
 }
 
 .vd-icon-bars {
-  background-color: transparent !important;
+  background-color: transparent;
   color: var(--white) !important;
   font-size: 1.40em;
   font-weight: 500;
@@ -797,8 +796,7 @@ mat-tab-group p {
   }
 
 .vd-icon-balancescale {
-  background-color: transparent !important;
-  color: var(--white) !important;
+  background-color: inherit;
   font-size: 1.40em;
   font-weight: 500;
 }
@@ -809,8 +807,7 @@ mat-tab-group p {
   }
 
 .vd-icon-usersecret {
-  background-color: transparent !important;
-  color: var(--white) !important;
+  background-color: inherit;
   font-size: 1.40em;
   font-weight: 500;
 }
@@ -821,27 +818,27 @@ mat-tab-group p {
   }
 
 .vd-icon-plus {
-  background-color: transparent !important;
-  color: var(--very-dark-gray) !important;
+  background-color: inherit;
+  color: var(--black) !important;
   font-size: 1.40em;
   font-weight: 500;
 }
   .vd-icon-plus:hover,
   .vd-icon-plus:focus {
     background-color: inherit;
-    color: var(--very-dark-gray) !important;
+    color: var(--black) !important;
   }
 
 .vd-icon-circle {
-  background-color: transparent !important;
-  color: var(--very-dark-gray) !important;
+  background-color: inherit;
+  color: var(--black) !important;
   font-size: 1.40em;
   font-weight: 500;
 }
   .vd-icon-circle:hover,
   .vd-icon-circle:focus {
     background-color: inherit;
-    color: var(--very-dark-gray) !important;
+    color: var(--black) !important;
   }
 
 .vd-spacer {
